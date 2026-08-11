@@ -4,13 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ps. Pablo Villate | Psicólogo Clínico</title>
-    
-    <!-- Google Fonts: Cormorant Garamond -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-    
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -21,7 +17,7 @@
                         ivory: '#FDFBF7',
                         gold: '#D4AF37',
                         sage: '#8BA082',
-                        olive: '#5A6650' /* Verde oscuro para los botones principales */
+                        olive: '#5A6650'
                     },
                     fontFamily: {
                         serif: ['"Cormorant Garamond"', 'serif'],
@@ -31,235 +27,119 @@
             }
         }
     </script>
-
     <style>
-        html {
-            scroll-behavior: smooth;
-        }
-        .hide-scrollbar::-webkit-scrollbar {
-            display: none;
-        }
-        .hide-scrollbar {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
+        html { scroll-behavior: smooth; }
     </style>
 </head>
 <body class="bg-ivory text-navy font-sans antialiased selection:bg-navy selection:text-ivory">
 
     <!-- Navbar -->
-    <nav class="fixed w-full bg-ivory/95 backdrop-blur-sm z-50 border-b border-navy/10 transition-all duration-300">
+    <nav class="fixed w-full bg-ivory/95 backdrop-blur-sm z-50 border-b border-navy/10">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#inicio" class="font-serif text-2xl font-bold tracking-wide text-navy">Ps. Pablo Villate</a>
-            <div class="hidden md:flex space-x-6 lg:space-x-8 text-sm font-medium tracking-widest uppercase">
-                <a href="#trayectoria" class="hover:text-navy/70 transition">Trayectoria</a>
-                <a href="#areas" class="hover:text-navy/70 transition">Áreas</a>
-                <a href="#modalidad" class="hover:text-navy/70 transition">Modalidades</a>
-                <a href="#docencia" class="hover:text-navy/70 transition">Docencia</a>
-                <a href="#ubicacion" class="hover:text-navy/70 transition">Ubicación</a>
+            <a href="#inicio"><img src="https://i.ibb.co/kVdrD5FR/1786027855415.png" alt="Logotipo Ps. Pablo Villate" class="h-12 w-auto"></a>
+            <div class="hidden md:flex space-x-8 text-sm font-medium uppercase tracking-widest">
+                <a href="#trayectoria" class="hover:text-gold transition">Trayectoria</a>
+                <a href="#areas" class="hover:text-gold transition">Áreas</a>
+                <a href="#modalidad" class="hover:text-gold transition">Modalidades</a>
+                <a href="#docencia" class="hover:text-gold transition">Docencia</a>
+                <a href="#ubicacion" class="hover:text-gold transition">Ubicación</a>
             </div>
-            <a href="#contacto" class="hidden md:inline-block bg-navy text-ivory px-6 py-2 rounded-sm text-sm uppercase tracking-wider hover:bg-navy/90 transition">
-                Contacto
-            </a>
-            <button class="md:hidden text-navy">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-            </button>
+            <a href="#contacto" class="bg-navy text-ivory px-6 py-2 rounded-sm text-sm uppercase tracking-wider hover:bg-gold transition">Contacto</a>
         </div>
     </nav>
 
-    <!-- Inicio / Hero Section (NUEVO DISEÑO) -->
-    <header id="inicio" class="relative pt-32 pb-16 md:pt-40 md:pb-24 overflow-hidden bg-ivory">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="flex flex-col-reverse md:flex-row items-center gap-12 md:gap-16">
-                
-                <!-- Columna Texto (Izquierda) -->
-                <div class="md:w-1/2 flex flex-col items-start text-left">
-                    <h1 class="font-serif text-5xl md:text-6xl lg:text-7xl font-medium text-navy leading-[1.1] mb-6">
-                        La palabra como camino hacia el entendimiento.
-                    </h1>
-                    <p class="text-lg md:text-xl text-navy/80 font-light leading-relaxed mb-10 max-w-lg">
-                        Psicoterapia psicoanalítica para adultos, adolescentes y parejas. Un espacio de escucha rigurosa para abordar el malestar contemporáneo y las transiciones vitales.
-                    </p>
-                    
-                    <!-- Botones -->
-                    <div class="flex flex-col sm:flex-row gap-4 mb-10 w-full sm:w-auto">
-                        <a href="#contacto" class="inline-flex justify-center items-center bg-olive text-white px-6 py-3 rounded-sm text-sm md:text-base font-medium hover:bg-olive/90 transition-colors shadow-sm">
-                            Agendar consulta presencial u online
-                        </a>
-                        <a href="https://wa.me/56984450907" target="_blank" class="inline-flex justify-center items-center border border-olive text-olive px-6 py-3 rounded-sm text-sm md:text-base font-medium hover:bg-olive hover:text-white transition-colors">
-                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/>
-                            </svg>
-                            Contactar por WhatsApp
-                        </a>
-                    </div>
-
-                    <!-- Texto Inferior -->
-                    <p class="text-sm text-navy/50 font-light max-w-md">
-                        Atención presencial en Las Condes / Vitacura, Santiago · Online en Chile y el extranjero.
-                    </p>
+    <!-- Inicio -->
+    <header id="inicio" class="pt-40 pb-24 px-6">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">
+            <div class="md:w-1/2">
+                <h1 class="font-serif text-6xl md:text-7xl font-medium leading-tight mb-8">La palabra como camino hacia el entendimiento.</h1>
+                <p class="text-lg md:text-xl text-navy/80 font-normal leading-relaxed mb-10 max-w-lg">Psicoterapia psicoanalítica para adultos, adolescentes y parejas. Un espacio de escucha rigurosa para abordar el malestar contemporáneo y las transiciones vitales.</p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#contacto" class="bg-gold text-navy px-8 py-4 rounded-sm font-medium hover:bg-gold/80 transition text-center shadow-lg">Agendar consulta</a>
+                    <a href="https://wa.me/56984450907" target="_blank" class="border border-navy px-8 py-4 rounded-sm font-medium hover:bg-navy hover:text-ivory transition text-center">WhatsApp</a>
                 </div>
-                
-                <!-- Columna Imagen (Derecha) -->
-                <div class="md:w-1/2 relative w-full md:pl-10">
-                    <img src="https://drive.google.com/uc?export=view&id=14Sz_UniyDek-VaaWZBkxxY6WO62erAV9" alt="Ps. Pablo Villate" class="w-full h-auto object-cover grayscale">
-                    
-                    <!-- Recuadro Descriptivo sobre la imagen -->
-                    <div class="absolute bottom-0 left-0 bg-white p-4 md:p-6 shadow-md transform translate-y-4 md:translate-y-6 md:translate-x-4 border border-navy/5">
-                        <h3 class="font-serif text-lg md:text-xl font-medium text-navy">Ps. Pablo Villate</h3>
-                        <p class="text-sm text-navy/60 font-light mt-1">Psicólogo Clínico</p>
-                    </div>
+            </div>
+            <div class="md:w-1/2 relative">
+                <img src="https://i.ibb.co/fVdk0Km9/1774612526619.png" alt="Ps. Pablo Villate" class="w-full grayscale shadow-2xl">
+                <div class="absolute -bottom-8 -left-8 bg-white p-6 shadow-xl border border-navy/5">
+                    <h3 class="font-serif text-xl font-medium">Ps. Pablo Villate</h3>
+                    <p class="text-navy/60">Psicólogo Clínico</p>
                 </div>
-
             </div>
         </div>
     </header>
 
-    <!-- Trayectoria Section -->
+    <!-- Trayectoria -->
     <section id="trayectoria" class="py-24 bg-white">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="flex flex-col md:flex-row items-center gap-16">
-                <div class="md:w-1/2">
-                    <img src="https://images.unsplash.com/photo-1573497620053-ea5300f94f21?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Consultorio" class="w-full h-auto object-cover grayscale rounded-sm shadow-xl">
-                </div>
-                <div class="md:w-1/2">
-                    <h2 class="font-serif text-4xl md:text-5xl font-bold mb-6 text-navy">Trayectoria</h2>
-                    <div class="w-12 h-[2px] bg-navy mb-8"></div>
-                    <div class="space-y-6 text-navy/80 leading-relaxed font-light">
-                        <p>
-                            Mi práctica clínica se fundamenta en el psicoanálisis, ofreciendo un espacio de escucha atenta y rigurosa frente al sufrimiento psíquico. Con años de experiencia en el ámbito clínico, mi objetivo es facilitar un proceso profundo de autoconocimiento y elaboración.
-                        </p>
-                        <p class="text-lg font-light text-navy/90">
-                            Actualmente, me desempeño como Subdirector del Centro Revincularse y Director de la Unidad Vincular de la Corporación Salvador, liderando equipos clínicos y coordinando estrategias de abordaje terapéutico integral para pacientes y familias.
-                        </p>
-                    </div>
-                </div>
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+            <img src="https://i.ibb.co/Rpyq4bzP/IMG-20260430-160005.png" alt="Consultorio" class="w-full grayscale shadow-xl">
+            <div class="space-y-6">
+                <h2 class="font-serif text-5xl font-bold">Trayectoria</h2>
+                <div class="w-12 h-1 bg-gold"></div>
+                <p class="text-lg font-normal leading-relaxed text-navy/80">Mi práctica clínica se fundamenta en el psicoanálisis, ofreciendo un espacio de escucha atenta y rigurosa frente al sufrimiento psíquico.</p>
+                <p class="text-lg font-normal leading-relaxed text-navy/90">Actualmente, me desempeño como Subdirector del Centro Revincularse y Director de la Unidad Vincular de la Corporación Salvador.</p>
             </div>
         </div>
     </section>
 
-    <!-- Áreas de Práctica Section -->
+    <!-- Áreas de Práctica -->
     <section id="areas" class="py-24 bg-ivory">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="font-serif text-4xl md:text-5xl font-bold mb-6 text-navy">Áreas de Práctica</h2>
-                <div class="w-12 h-[2px] bg-navy mx-auto"></div>
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-10 border border-navy/5">
+                <h3 class="font-serif text-2xl font-semibold mb-4">Psicoterapia Adultos/Adolescentes</h3>
+                <p class="text-navy/70 font-normal leading-relaxed">Un espacio analítico diseñado para explorar los conflictos inconscientes y malestares que limitan el desarrollo personal.</p>
             </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white p-10 border border-navy/5 hover:border-navy/20 transition-colors duration-300 group">
-                    <h3 class="font-serif text-2xl font-semibold mb-4 group-hover:text-navy/80 transition-colors">Psicoterapia Individual</h3>
-                    <p class="text-navy/70 font-light leading-relaxed">
-                        Un espacio analítico diseñado para explorar los conflictos inconscientes, síntomas y malestares que limitan el desarrollo personal. A través de la palabra, trabajamos para desanudar el sufrimiento y encontrar nuevas formas de posicionarse ante la vida.
-                    </p>
-                </div>
-                <div class="bg-white p-10 border border-navy/5 hover:border-navy/20 transition-colors duration-300 group">
-                    <h3 class="font-serif text-2xl font-semibold mb-4 group-hover:text-navy/80 transition-colors">Vincular / Parejas</h3>
-                    <p class="text-navy/70 font-light leading-relaxed">
-                        Abordaje clínico centrado en el sufrimiento que emerge en los lazos afectivos. Orientado a parejas y dinámicas vinculares complejas, buscando comprender las lógicas de repetición, desencuentros y pactos inconscientes que sostienen el conflicto.
-                    </p>
-                </div>
-                <div class="bg-white p-10 border border-navy/5 hover:border-navy/20 transition-colors duration-300 group">
-                    <h3 class="font-serif text-2xl font-semibold mb-4 group-hover:text-navy/80 transition-colors">Supervisión Clínica</h3>
-                    <p class="text-navy/70 font-light leading-relaxed">
-                        Espacio de orientación y transmisión para profesionales de la salud mental. Acompañamiento en la dirección de la cura, análisis de casos clínicos y reflexión teórica para sostener el quehacer clínico desde el marco del psicoanálisis.
-                    </p>
-                </div>
+            <div class="bg-white p-10 border border-navy/5">
+                <h3 class="font-serif text-2xl font-semibold mb-4">Vincular / Parejas</h3>
+                <p class="text-navy/70 font-normal leading-relaxed">Abordaje clínico centrado en el sufrimiento de los lazos afectivos y los pactos inconscientes que sostienen el conflicto.</p>
+            </div>
+            <div class="bg-white p-10 border border-navy/5">
+                <h3 class="font-serif text-2xl font-semibold mb-4">Supervisión Clínica</h3>
+                <p class="text-navy/70 font-normal leading-relaxed">Espacio de orientación para profesionales, análisis de casos y reflexión teórica desde el marco del psicoanálisis.</p>
             </div>
         </div>
     </section>
 
-    <!-- Modalidad Section -->
-    <section id="modalidad" class="py-24 bg-white">
-        <div class="max-w-5xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="font-serif text-4xl md:text-5xl font-bold mb-6 text-navy">Modalidades</h2>
-                <div class="w-12 h-[2px] bg-navy mx-auto mb-8"></div>
-                <h3 class="font-serif text-3xl md:text-4xl text-navy mb-6">Presencial u online, según lo que el proceso requiera</h3>
-                <p class="text-lg text-navy/80 leading-relaxed font-light max-w-3xl mx-auto">
-                    La atención puede desarrollarse de forma presencial en Santiago o mediante videollamada segura para pacientes en Chile y el extranjero. La modalidad se acuerda en función del encuadre clínico más adecuado para cada caso.
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
-                <div class="bg-ivory p-10 border border-navy/5 rounded-sm hover:border-navy/20 transition-colors duration-300">
-                    <h4 class="text-xs uppercase tracking-widest text-navy/60 mb-4 font-semibold">Atención Presencial</h4>
-                    <h5 class="font-serif text-2xl font-semibold text-navy mb-4">Consultorio Las Condes · Vitacura</h5>
-                    <p class="text-navy/70 font-light leading-relaxed mb-8">
-                        Av. Presidente Kennedy 7440, Of. 105<br>
-                        Vitacura, Sector Alto Las Condes<br>
-                        Santiago, Chile
-                    </p>
-                    <p class="text-sm text-navy/50 font-light italic">
-                        Atención presencial con horario coordinado previamente.
-                    </p>
-                </div>
-                <div class="bg-ivory p-10 border border-navy/5 rounded-sm hover:border-navy/20 transition-colors duration-300">
-                    <h4 class="text-xs uppercase tracking-widest text-navy/60 mb-4 font-semibold">Atención Online</h4>
-                    <h5 class="font-serif text-2xl font-semibold text-navy mb-4">Videollamada segura · Chile y el extranjero</h5>
-                    <p class="text-navy/70 font-light leading-relaxed">
-                        Mismo encuadre clínico, frecuencia y confidencialidad que la atención presencial. Ideal para pacientes que se encuentran fuera de Santiago o que necesitan flexibilidad sin renunciar a la profundidad del proceso analítico.
-                    </p>
-                </div>
-            </div>
+    <!-- Docencia -->
+    <section id="docencia" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8">
+            <div class="p-4 border border-navy/5"><img src="https://i.ibb.co/8gKxsR7P/IMG-20260425-152250.png" alt="Espacio de Supervisión Clínica" class="w-full h-64 object-cover grayscale mb-4"><h3 class="text-lg font-bold">Espacio de Supervisión Clínica</h3></div>
+            <div class="p-4 border border-navy/5"><img src="https://i.ibb.co/DPqv52mP/IMG-20260811-103509.png" alt="Vincularidades en movimiento" class="w-full h-64 object-cover grayscale mb-4"><h3 class="text-lg font-bold">Vincularidades en movimiento</h3></div>
+            <div class="p-4 border border-navy/5"><img src="https://i.ibb.co/zhL815Mj/1786028884648.png" alt="Congreso Chileno de Psicoterapia" class="w-full h-64 object-cover grayscale mb-4"><h3 class="text-lg font-bold">Congreso Chileno de Psicoterapia</h3></div>
         </div>
     </section>
 
-    <!-- Docencia Section -->
-    <section id="docencia" class="py-24 bg-ivory">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="mb-16 max-w-3xl">
-                <h2 class="font-serif text-5xl md:text-6xl font-bold mb-6 text-navy">Actividades docentes</h2>
-                <p class="text-xl text-navy/70 leading-relaxed font-light">
-                    Cursos, talleres, seminarios y supervisiones. Aquí pueden subir y consultarse las actividades académicas y de formación.
-                </p>
+    <!-- Ubicación -->
+    <section id="ubicacion" class="py-24 bg-ivory">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="font-serif text-5xl font-bold mb-8">Consulta</h2>
+                <p class="text-xl">Av. Presidente Kennedy 7440, Of. 105, Vitacura.</p>
             </div>
+            <a href="https://www.google.com/maps/search/?api=1&query=Av.+Presidente+Kennedy+7440,+Oficina+105,+Vitacura" target="_blank" class="h-96 w-full block relative grayscale hover:grayscale-0 transition duration-500">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3330.407185073003!2d-70.56947708480164!3d-33.39893998078864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662ce8b1a38aab5%3A0x6b825ad757f49ea!2sAv.%20Pdte.%20Kennedy%207440%2C%20Vitacura%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1sen!2scl!4v1680000000000!5m2!1sen!2scl" width="100%" height="100%" frameborder="0"></iframe>
+            </a>
+        </div>
+    </section>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white group cursor-pointer border border-navy/5 hover:border-navy/20 transition-all duration-300 rounded-sm overflow-hidden flex flex-col">
-                    <div class="h-56 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1544531586-fde5298cdd40?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Supervisión" class="w-full h-full object-cover grayscale group-hover:scale-105 transition-transform duration-700">
-                    </div>
-                    <div class="p-8 flex-1 flex flex-col">
-                        <div class="text-right mb-4">
-                            <span class="text-xs text-navy/50 uppercase tracking-widest">● Presencial</span>
-                        </div>
-                        <h3 class="font-serif text-2xl font-semibold mb-4 text-navy">Espacio de Supervisión Clínica:</h3>
-                        <div class="text-sm text-navy/70 font-light leading-relaxed hide-scrollbar overflow-y-auto max-h-48 pr-2">
-                            <p class="mb-2">"Analizando la matriz vincular en el sufrimiento agudo: Análisis del caso Mariela"</p>
-                            <p class="mb-2"><strong>Supervisor:</strong> Ps. Pablo Villate</p>
-                            <p class="mb-2"><strong>Orientación Teórico-Clínica:</strong> Psicoanálisis Relacional y Vincular contemporáneo.</p>
-                            <p>Supervisión clínica de caso para profesionales de la salud mental. Espacio de supervisión y discusión clínica centrado en el abordaje de crisis agudas y descompensaciones bajo una perspectiva psicoanalítica relacional y vincular. Tomando como eje el caso de una paciente de 55 años que consulta tras un episodio de efracción somática y angustia severa ("reventó" en el ámbito laboral), se profundiza en el análisis del mapa vincular, las lealtades invisibles y las dinámicas...</p>
-                        </div>
-                    </div>
+    <!-- Contacto -->
+    <section id="contacto" class="py-24 bg-navy text-ivory">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="font-serif text-6xl font-bold mb-12">¿Iniciamos un proceso?</h2>
+            <form action="https://formsubmit.co/ps.pablovillate@gmail.com" method="POST" class="grid md:grid-cols-2 gap-12">
+                <div class="space-y-6">
+                    <input type="text" name="Nombre" placeholder="Nombre" required class="w-full bg-transparent border-b border-ivory/30 p-2">
+                    <input type="email" name="Email" placeholder="Email" required class="w-full bg-transparent border-b border-ivory/30 p-2">
+                    <textarea name="Mensaje" placeholder="Mensaje" required class="w-full bg-transparent border-b border-ivory/30 p-2 h-32"></textarea>
+                    <button type="submit" class="bg-gold text-navy px-8 py-4 rounded-sm font-bold w-full">Enviar mensaje</button>
                 </div>
-
-                <div class="bg-white group cursor-pointer border border-navy/5 hover:border-navy/20 transition-all duration-300 rounded-sm overflow-hidden flex flex-col">
-                    <div class="h-56 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Psicoanálisis Vincular" class="w-full h-full object-cover grayscale group-hover:scale-105 transition-transform duration-700">
-                    </div>
-                    <div class="p-8 flex-1 flex flex-col">
-                        <div class="text-right mb-4">
-                            <span class="text-xs text-navy/50 uppercase tracking-widest">● Presencial</span>
-                        </div>
-                        <h3 class="font-serif text-2xl font-semibold mb-4 text-navy leading-snug">Vincularidades en movimiento: la mentalización como herramienta clínica": Unidad de Psicoanálisis Vincular</h3>
-                        <div class="text-sm text-navy/70 font-light leading-relaxed hide-scrollbar overflow-y-auto max-h-48 pr-2">
-                            <p>Encuentro Clínico: " Corporación Psicoterapéutica Salvador. Ps. Pablo Villate. Descripción: Actividad docente y de intercambio clínico dirigida a psicólogos/as y psiquiatras, orientada a explorar los desafíos de la clínica psicoanalítica vincular frente a los malestares emergentes. A partir de la presentación y discusión de un caso clínico, se expuso cómo la apertura teórica entre diversos marcos conceptuales —leídos desde una perspectiva dialógica— flexibiliza la práctica clínica y hab...</p>
-                        </div>
-                    </div>
+                <div class="space-y-6">
+                    <p>Coordina tu sesión vía WhatsApp o formulario. Confidencialidad garantizada.</p>
+                    <a href="https://wa.me/56984450907" target="_blank" class="block bg-sage p-4 text-center font-bold">WhatsApp: +56 9 8445 0907</a>
                 </div>
+            </form>
+        </div>
+    </section>
 
-                <div class="bg-white group cursor-pointer border border-navy/5 hover:border-navy/20 transition-all duration-300 rounded-sm overflow-hidden flex flex-col">
-                    <div class="h-56 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Congreso Chileno" class="w-full h-full object-cover grayscale group-hover:scale-105 transition-transform duration-700">
-                    </div>
-                    <div class="p-8 flex-1 flex flex-col">
-                        <div class="text-right mb-4">
-                            <span class="text-xs text-navy/50 uppercase tracking-widest">● Presencial</span>
-                        </div>
-                        <h3 class="font-serif text-2xl font-semibold mb-4 text-navy leading-snug">17° Congreso Chileno de Psicoterapia y 15° Congreso Chileno de Investigación en Psicoterapia</h3>
-                        <div class="text-sm text-navy/70 font-light leading-relaxed hide-scrollbar overflow-y-auto max-h-48 pr-2">
-                            <p>Presentacion del Taller: "Vincularidades en Movimiento: La mentalización como herramienta en la clínica vincular psicoanalítica" en el Marco del 17° Congreso Chileno de Psicoterapia y 15° Congreso Chileno de Investigación en Psicoterapia. Ps. Pablo Villate (en co-presentación con la Unidad de Psicoanálisis Vincular de la Corporación Psicoterapéutica Salvador). Espacio de formación clínica en formato taller enfocado en la integración de la teoría de la mentalización (Fonagy, Target) y el psicoanálisis vincular (Kaës, Puget). Durante la actividad se abordó la articulación del vínculo mentalizador como matriz de co-construcción intersubjetiva, analizando cómo esta perspectiva sostiene la simbolización compartida y permite la regulación y transformación de las dinámicas relacionales en la práctica clínica contemporánea.</p>
-                        </div>
-                        <div class="mt-6 pt-4 border-t border-navy/10 text-xs text-navy/50 font-medium">
-                            🗓 28 de agosto de 2025
+</body>
+</html>
